@@ -1,5 +1,9 @@
+// 加载样式文件
 // require("../css/app.css");
 require("../less/app.less");
+
+let img = require("../images/yun.png");
+console.log("img ==>", img);
 
 window.onload = function(){
 
@@ -15,6 +19,12 @@ window.onload = function(){
 
         ul.appendChild(li);
     })
-
     document.body.appendChild(ul);
+
+    // 创建图片对象
+    let image = new Image();
+
+    image.src = img;
+    
+    document.getElementById("icon").appendChild(image);
 }
